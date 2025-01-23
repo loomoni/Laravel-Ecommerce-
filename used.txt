@@ -1,0 +1,4 @@
+-> Laravel ui package for the authentication: 
+ commnad: composer require laravel/ui
+-> bootstra scan folding 
+ command: php artisan ui bootstrap --auth
