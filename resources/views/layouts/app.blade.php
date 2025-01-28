@@ -503,7 +503,7 @@
       </div>
     </header>
 
-  @yield("content")
+      @yield("content")
   
     <hr class="mt-5 text-secondary" />
     <footer class="footer footer_type_2">
