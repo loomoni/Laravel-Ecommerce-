@@ -34,7 +34,7 @@
                         </div>
                     </form>
                 </div>
-                <a class="tf-button style-1 w208" href="{{ route('admin.categories.add') }}"><i
+                <a class="tf-button style-1 w208" href="{{ route('admin.category.add') }}"><i
                         class="icon-plus"></i>Add new</a>
             </div>
             <div class="wg-table table-all-user">
@@ -58,7 +58,7 @@
                                     <td>{{ $category->id }}</td>
                                     <td class="pname">
                                         <div class="image">
-                                            <img src="{{ asset('uploads/categorys') }}/{{$category->image}}" alt="{{ $category->name }}" class="image">
+                                            <img src="{{ asset('uploads/categories') }}/{{$category->image}}" alt="{{ $category->name }}" class="image">
                                         </div>
                                         <div class="name">
                                             <a href="#" class="body-title-2">{{ $category->name }}</a>
@@ -68,12 +68,12 @@
                                     <td><a href="#" target="_blank">0</a></td>
                                     <td>
                                         <div class="list-icon-function">
-                                            <a href="{{ route('admin.categories.edit', ['id'=>$category->id]) }}">
+                                            <a href="{{ route('admin.category.add', ['id'=>$category->id]) }}">
                                                 <div class="item edit">
                                                     <i class="icon-edit-3"></i>
                                                 </div>
                                             </a>
-                                            <form action="{{ route('admin.categories.delete', ['id'=>$category->id]) }}" method="POST">
+                                            <form action="{{ route('admin.category.add', ['id'=>$category->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <div class="item text-danger delete">
