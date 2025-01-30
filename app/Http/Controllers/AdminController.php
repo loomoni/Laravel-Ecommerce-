@@ -92,4 +92,17 @@ class AdminController extends Controller
             $constraint->aspectRation();
         })->save($destination.'/'.$imageName);
     }
+
+    public function brand_delete($id)
+    {
+        $brand = Brand::find($id);
+
+        if(File::exists(public_path('uploads/brands').'/'.$brand->image))
+        {
+            File::delete(public_path('uploads/brands').'/'.$brand->image);
+        }
+        $brand->delete();
+
+        return redirect()->route('admin.brands')->with('status', 'brand has been deleted successfully');
+    }
 }
